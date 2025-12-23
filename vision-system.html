@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Identity Project - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div style="width: 100%; background: linear-gradient(135deg, #3d4c3d 0%, #2a3a2a 100%);">
+        <img src="gif/vision-banner.gif" alt="Brand Identity Banner" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <!-- STATS SECTION -->
+    <section class="project-stats-cards">
+        <div class="stats-cards-container">
+            <div class="stat-card">
+                <div class="stat-value">1</div>
+                <div class="stat-label">Week</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">87%</div>
+                <div class="stat-label">Grade</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">11</div>
+                <div class="stat-label">Waste Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">89.89%</div>
+                <div class="stat-label">Test Accuracy</div>
+            </div>
+        </div>
+
+        <!-- NAV -->
+        <div style="margin-top: 2rem; font-size: 1.02rem;">
+            <strong>Quick Navigation:</strong>
+            <a href ="#ov" style="color: #476c47; text-decoration: none; font-weight: bold;">Overview </a> | 
+            <a href="#sum" style="color: #476c47; text-decoration: none; font-weight: bold;">Project Summary</a> | 
+            <a href="#meth" style="color: #476c47; text-decoration: none; font-weight: bold;">Methodology</a> | 
+            <a href="#md" style="color: #476c47; text-decoration: none; font-weight: bold;">Model Development</a> |
+            <a href="#l" style="color: #476c47; text-decoration: none; font-weight: bold;">Limitations</a> |
+            <a href="#re" style="color: #476c47; text-decoration: none; font-weight: bold;">Project Reflections</a>
+        </div>
+    </section>
+
+
+    <!-- PROJECT OVERVIEW -->
+    <section style="background: #f9fafb;" id="ov">
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+    
+        <div style="flex: 1; min-width: 300px; border-right: 2px solid #5f636a; padding-right: 2rem; ">
+        <h2>Project Overview</h2>
+                <p>
+                    <strong>Key Requirements:</strong> Waste continues to play an impact on the environment through pollution. To combat this, develop a vision system that classifies 
+                    waste items into categories such as plastic, paper, metal, glass, and organic material. The model must recognize objects from various angles while 
+                    addressing challenges like partially obscured items and similar-looking materials with different disposal requirements         
+                 </p>
+                <p><strong>Solution:</strong> Develop a vision system that classifies different sorts of waste in the real-world accurately</p>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; padding-left: 2rem; " id="sum">
+           <h2>Summary</h2>
+                <p>A waste classifier vision system that detects 11 different waste categories. The vision system machine learning framework is PyTorch and Sklearn.
+                    The neural network architecture utilised was convolutional neural network (CNN) to work with data patterns and visual datasets, with the CNN model
+                    being ResNet18. Despite the accuracy being quite high but not too high, the classification report, confusion matrix, and training & 
+                    validation reports indicate faulty areas and possible overfitting. Furthermore, there are limitations such as material clash, real-world items being 
+                    distorted and hardware. 
+                </p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Methodology-->
+    <section id="meth">
+        <h2>Methodology</h2>
+        <h3>Data Collection</h3>
+            <p>All datasets were retrieved from Kaggle and are as follows:</p>
+                <li>The first dataset was retrieved from <a href="https://www.kaggle.com/dsv/10182596" target="_blank" style="color: #c5710b; text-decoration: none; 
+                    font-weight: bold;">Suman Kunwar</a>  which contained 10 directories (Battery, Biological, Cardboard, 
+                    Clothes, Glass, Metal, Paper, Plastic, Shoes and Trash)</li>
+                <li>The second dataset was retrieved from <a href="https://www.kaggle.com/datasets/akshat103/e-waste-image-dataset" target="_blank" style="color: #c5710b; 
+                    text-decoration: none; font-weight: bold;">Akshat Tamrakar</a> which contained 10 directories (PCB (Print Circuit Board),
+                    Player, Battery, Microwave, Mobile, Mouse, Printer, Television, Washing Machine and Keyboard)</li>
+                <li>The third dataset was retrieved from <a href="https://www.kaggle.com/ds/81794" target="_blank" style="color: #c5710b; text-decoration: none; 
+                    font-weight: bold;">Cchangcs</a> which included 6 directories (Cardboard, Glass, Metal, Paper, Plastic and Trash)</li>
+                <li>The last dataset was retrieved from <a href="https://www.kaggle.com/datasets/angelikasita/waste-images" target="_blank" style="color: #c5710b; 
+                    text-decoration: none; font-weight: bold;">Angelika Ouedragogo</a> which included 9 directories (Aluminium, Carton, E-Waste, Glass, Organic Waste,
+                Paper and Cardboard, Plastics, Textiles and Wood)</li>
+
+            <p>These datasets were well thought of and combined to achieve realism for the real world. For example, the idea of merging categories such as clothes with 
+                shoes under the textile category was thought of but they are not always recycled together due to materials like rubber on shoes. Furthermore, adding a 
+                carton category was important as cartons contain aluminium, so in the recycling process, it may be split from cardboard.</p>
+
+            <p>With all this information, the following directories accumulated is as follows:</p>
+
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+
+                <div style="flex: 1; align-items: center;">
+                    <li><strong>Cardboard - </strong> from 'Garbage Dataset'</li>
+                    <li><strong>Carton - </strong> from 'Waste Images'</li>
+                    <li><strong>Clothes - </strong> from 'Garbage Dataset'</li>
+                    <li><strong>Battery - </strong> from 'Garbage Dataset'</li>
+                    <li><strong>E-Waste - </strong> all 'E Waste Image Dataset' directories besides the battery directory</li>
+                    <li><strong>Metal - </strong> glass directory from 'Garbage Classification' with glass directory from 'Garbage Dataset'</li>
+                    <li><strong>Organic Waste - </strong> metal directory from 'Garbage Classification' with metal directory from 'Garbage Dataset'</li>
+                    <li><strong>Cardboard - </strong> organic waste directory from 'Waste Images' with biological directory from 'Garbage Dataset'</li>
+                    <li><strong>Paper - </strong> paper directory from 'Garbage Classification' with paper directory from 'Garbage Dataset'</li>
+                    <li><strong>Plastic - </strong> plastics directory from 'Waste Images' with plastics directory from 'Garbage Dataset'</li>
+                    <li><strong>Shoes - </strong> from 'Garbage Dataset'</li>
+                    <li><strong>Trash - </strong> from 'Garbage Dataset'</li>
+                </div>
+                
+                <div style="flex: 0.15  450px; height: 350px;">
+                    <img src="images/vision-before.png" alt="Vision System Before" style="width: 100%; height: 100%;" class="zoomable" onclick="openLightbox(this) ">
+                </div>
+            </div>
+
+            <h3>Pre-processing</h3>
+            <p>As observed in the diagram above, the dataset is imbalanced, creating a bias</p>
+            <h4>Cleaning the Dataset</h4>
+                <li>The first action taken was to decrease the battery directory through python and combine it with E-Waste manually</li>
+                <li>The second action was to remove all files that were not jpgs which was done using python. Removing non jpg files helped reduced the dataset by a 
+                    small bit</li>
+                <li>The third action was to remove duplicates in each directory which was done through DupeGuru. After this step, labelling the images correctly in 
+                    each directory was important since various datasets directories were combined. For example, all plastic images would have the syntax of 
+                    ‘plastic’, and so on</li>
+            <h4>Handling imbalances</h4>
+            <div style="display: flex; gap: 2rem; flex-wrap: wrap; align-items: center;">
+                
+                <div style="flex: 0.1  400px;">
+                    <img src="images/vision-after.png" alt="pre-processing" style="width: 100%; height: 100%; " class="zoomable" onclick="openLightbox(this) ">
+                </div>
+                
+                <div style="flex: 1; ">
+                    <p>The fourth action was to apply undersampling to the dataset with the max folder being 500. This allowed for the dataset to be reduced so 
+                        it could be manageable, but random sampling is also a technique to balance datasets that prevents bias.</p>
+                </div>
+            </div>
+
+            <h4>Data Splitting</h4>
+                <li>Before normalization, data splitting occurs first to prevent information leakage from the testing set into the training set which can lead to 
+                    unrealistic performance evaluations</li>
+                <li>The dataset was split into ‘Training’, ‘Validation’, and ‘Test’ using the 80:10:10 ratio, respectively. The training dataset was set at a higher 
+                    percentage rate so it could heavily learn patterns. In fine-tuning, the split was split into the 60:20:20 ratio as objects struggled to be detected 
+                    in the real-world. This could have been because the 80:10:10 split lead each category to display an average of 50 images in each of the
+                    11 directories. Furthermore, random sampling was applied as it ensures the split is unbiased</li>
+
+            <h4>Normalization and Data Augmentation</h4>
+                <li>The next step was to calculate the mean and standard deviation so it could be utilised in normalizing the dataset which will assist when the data volume is huge, 
+                    and it assists in accuracy and reducing redundancy</li>
+                <li>Alongside normalization, data augmentation was applied to the training aspect of the dataset to increase the size and diversity of the dataset 
+                    to improve generalisation and accuracy, and additionally, to reduce overfitting (when the model learns training data too well, so it is unable to 
+                    generalise new data). The image below displays the augmentations applied to the training data set.</li>
+                <div><img src="images/augmentation.png" alt="augmentation" style="width: 70%; height: 10%; margin-left: 20px; margin-top: 1rem; " class="zoomable" onclick="openLightbox(this) "></div>
+        </section>
+
+
+    <!-- Model dev -->
+    <section style="background: #f9fafb; " id="md">
+        <h2>Model Development</h2>
+        <h3>Machine Learning Framework</h3>
+            <p>The machine learning framework that was utilised for this project is PyTorch as it is easier to use for beginners than 
+                Tensorflow. Additionally, PyTorch was chosen over TensorFlow because it is suitable for rapid prototyping.</p>
+            <p>In addition to PyTorch, Sklearn was applied to provide classification reports and visualisations like the confusion matrix to 
+                evaluate the performance of the model.</p>
+        <h3>Neural network architecture</h3>
+            <p>The neural network architecture that will be utilised is convolutional neural network (CNN) which is useful for data patterns and visual datasets like images 
+                and videos.</p>
+            <p>At first, a CNN model was in the process of being created from scratch, but due to the constant low accuracy (60% for the most) 
+                regardless of changes made, the decision of using a pre-trained model was established. ResNet18 was utilised over ResNet50 due to computational resources 
+                being limited such as GPU and because it can handle complex and large datasets.</p>
+        <h3>Training and validation</h3>
+            <p>The training dataset is utilised for the model to understand patterns on the dataset whereas validating the dataset is used to assess the performance of the 
+                model and tell us how the model is learning and adapting. I had 15 epochs so the model could learn the pattern. The loss image below displays that the
+                training loss decrease was consistent which indicates the model is learning effectively but the validation loss trend varies which means that model
+                performance on unseen data is not improving and the gap between the training and validation indicates the model isn’t overfitting. The validation image below 
+                also indicates that the model is learning effectively but the gap between the two line graphs indicates potential overfitting.</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; ">
+                    <img src="images/loss.png" alt="loss diagram" style="width: 100%; height: 100%; margin-left: 20px; " class="zoomable" onclick="openLightbox(this)">
+                    <img src="images/validation.png" alt="validation diagram" style="width: 100%; height: 100%; margin-left: 20px; " class="zoomable" onclick="openLightbox(this)">
+                </div>
+        <h3>Evaluation</h3>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+        <div style="flex: 1;">
+            <p>In this phase, testing is run for the model to test unseen data. The images display the performance of the test. The classification report shows the 
+                precision, recall, F1-score and support for each category. Cardboard has the highest F1-score of 0.98 and metal has the lowest F1-score of 0.78. 
+                Additionally, cardboard has the highest precision of 1.00 and metal with the lowest precision of 0.67. The overall test accuracy is of 89.10% which 
+                means that 89.10% of the test samples were correctly classified. The lowest recall is from carton of 0.72 which means the model struggled to correctly 
+                identify the samples. The confusion matrix indicates that there is frequent plastic and glass misclassifications which
+                can be due to the transparency of those objects. Additionally, E-Waste gets confused with metal which can be because electronics contains metal</p>
+            <p> Additionally, object detection was utilised to test new and unseen data in real time. My results were not too optimistic as 
+                it identified myself as shoe and trash. Additionally, it tended to mix up plastic with glass so fine-tuning was needed.</p>
+            </div>
+            <div style="flex: 0.3  600px;">
+                <img src="images/evaluation.png" alt="evaluation" style="width: 100%; height: 100%; " class="zoomable" onclick="openLightbox(this)">
+            </div>
+        </div>
+        <h3>Fine-Tuning</h3>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+            <div style="flex: 0.3  600px;">
+                <img src="images/fine-tune.png" alt="fine-tune" style="width: 100%; height: 100%;" class="zoomable" onclick="openLightbox(this)">
+            </div>
+        <div style="flex: 1;">
+        <p>In this phase, I used my reduced dataset and built from there. I created a new folder for the fine-tuning dataset. I manually deleted similar images and took 
+            images of my own and added it to the respective directories. From there, I continued the usual process of splitting the data, but I decided to split the 
+            dataset into a 60:20:20 ratio as mentioned earlier. After that, calculating the new mean and standard deviation for normalization was established. 
+            In addition, data augmentation was applied but the only difference from the first time was adding a hue (at 0.1) and some values (RandomRotation at 15, and 
+            brightness and contrast at 0.3). The reason behind increasing the ColorJitter values was so it can be more robust for the real-world lighting variations.</p>
+
+        <p>I reduced the epochs to 10 due to my data split ratio and for it to run faster. The model is still overfitting which can be reviewed in the loss and 
+            validation. The loss diagram also displays that the training loss consistently decreases which indicates that the model is learning the patterns
+            effectively, but the validation loss decreases initially, stabilise then fluctuates up and then down again which suggests that the model performance on
+            unseen data improves early. The validation diagram displays that the training accuracy increases which indicates the model is learning patterns effectively.</p>
+            
+        <p>The classification report displays that the test overall accuracy was 89.89% which means 89.89% of the test samples were classified correctly. It also 
+                displays that the plastic class is performing poorly due to it being the lowest recall (0.71), precision (0.86) and F1-score (0.78). The confusion 
+                matrix indicates that glass is being identified as metal and plastic is being identified as trash.</p>
+        </div> 
+        </div>
+    </section>
+        
+
+    <!-- Real-world applications, Limitations and Ethics -->
+    <section id="l">
+    <h2>Real-world applications, Limitations and Ethics</h2>
+    <h3>Real-world applications</h3>
+        <p>The waste classification vision system can be deployed in recycling facilities. This could assist the facilities in identifying the waste category and ensure 
+            waste is separated correctly for recycling. Additionally, it can be deployed in public spaces to guide citizens on recycling separation, so essentially, 
+            citizens would be helping recycling facilities.</p>
+    <h3>Limitations</h3>
+        <p>The vision system did not perform with 100% accuracy. This could be because of the data selection in the datasets and underrepresented categories. 
+            Additionally, items like electronics are made from metal and plastic materials which does hinder the system from identifying the object as an electronic item</p>
+        <p> Additionally, in the real-world, objects tend to be more distorted, dirty and broken. As reviewed in my object detection phase, 
+            some items were classified as trash although my trash dataset did not resemble the other directories</p>
+        <p>Furthermore, hardware such as a lack of GPU lead me to using ResNet18 instead of ResNet50.</p>
+        <p>And lastly, lighting and background hinders object detection. For example, bad lighting can perceive paper as cardboard.
+            Additionally, from experience, the white background can hinder object detection as it will perceive the object as paper</p>
+    <h3>Ethics</h3>
+        <li><strong>Bias - </strong>Bias can lead to inaccuracy in identifying objects in the real-world. There are ways of mitigating it such as through data augmentation, 
+            random sampling, undersampling or oversampling. Additionally, outliers, missing data and irrelevant data should be removed to help reduce bias. Lastly, the 
+            dataset should be diverse to avoid redundancy and duplicates</li> 
+        <li><strong>Privacy - </strong>Visions systems pick up objects but also people. Additionally, items like order boxes from Takealot contains citizens addresses which 
+            can violate citizens privacy and confidentiality. Finding ways such as blurring address details should be implemented</li> 
+    </section>`
+
+
+    <!-- reflection -->
+    <section style="background: #f9fafb; " id="re">
+        <h2>Project Reflections</h2>
+        <p>Despite the drawbacks from this vision system due to challenges such as misclassification, the waste classification vision system still has the potential 
+            of improving through:
+            <li>more testing</li>
+            <li>diversifying the dataset by taking images myself of different angles</li>
+            <li>research about data augmentation to know if I'm applying the right adjustments</li>
+            <li>research about increasing and decreasing epochs depending on dataset size</li>
+            <li>research the best split for dataset size</li>
+        </p>
+        <p>So, by addressing these shortfalls such as bad lighting and future improvements, the waste classification vision system can one day assist in reducing environmental harm.</p>
+    </section>
+
+
+    <section>
+        <div class="buttons" style="display: flex; align-items: center;  padding-top: 2rem;">
+            <a href="inventory.html" class="btn btn-fifth">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <a href="tech.html" class="btn btn-fifth">Back to All Projects</a>
+            <a href="irrigation.html" class="btn btn-fifth">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

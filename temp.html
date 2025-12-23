@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Identity Project - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+     <!-- HERO SECTION -->
+    <div style="width: 100%; background: linear-gradient(135deg, #3d4c3d 0%, #2a3a2a 100%);">
+        <img src="gif/temp-banner.gif" alt="temp banner" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <!-- STATS SECTION -->
+    <section class="project-stats-cards">
+        <div class="stats-cards-container">
+            <div class="stat-card">
+                <div class="stat-value">1</div>
+                <div class="stat-label">Week</div>
+            </div>
+            <div class="stat-card">
+                        <div class="stat-value">92%</div>
+                        <div class="stat-label">Grade</div>
+                    </div>
+            <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">Real-Time</div>
+                <div class="stat-label">Dashboard updates</div>
+            </div>
+            <div class="stat-card">
+            <div class="stat-value">DHT11</div>
+                <div class="stat-label">Sensor Type</div>
+            </div>
+        </div>
+
+        <!-- NAV -->
+        <div style="margin-top: 2rem; font-size: 1.02rem;">
+            <strong>Quick Navigation:</strong>
+            <a href ="#ov" style="color: #476c47; text-decoration: none; font-weight: bold;">Overview </a> | 
+            <a href="#fe" style="color: #476c47; text-decoration: none; font-weight: bold;">Key Features</a> | 
+            <a href="#ss" style="color: #476c47; text-decoration: none; font-weight: bold;">System Setup</a> |
+            <a href="#demo" style="color: #476c47; text-decoration: none; font-weight: bold;">Interface Demostration</a> |
+            <a href="#re" style="color: #476c47; text-decoration: none; font-weight: bold;">Project Reflections</a>
+        </div>
+    </section>
+
+
+    <!-- PROJECT OVERVIEW -->
+    <section style="background: #f9fafb; " id="ov">
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+    
+        <div style="flex: 1; min-width: 300px; border-right: 2px solid #5f636a; padding-right: 2rem; ">
+        <h2>Project Overview</h2>
+            <p>
+                <strong>Background: </strong>The primary goal of this group project was to introduce us to the fundamentals of IoT development through hands-on experience 
+                with physical microcontrollers, external sensors, actuators, software, and communication protocols. 
+            </p>
+            
+            <p><strong>Key Requirements:</strong></p>
+                <li>Install the necessary Python libraries to interact with the DHT11 sensor</li>
+                <li>Create a Python script that reads and displays the data from the sensor with a timestamp</li>
+                <li>Log the data to a file (e.g. CSV) for further analysis</li>
+            
+            <p>
+                <strong>Solution: </strong>Integrate the DHT11 sensor with a Raspberry Pi and develop a user-friendly interface that displays the current temperature and 
+                humidity readings, alongside their corresponding timestamps. Furthermore, the data must be logged into a CSV file.
+            </p>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; " id="fe">
+            <h2>Key Features</h2>
+            <li><strong>Real-Time Dashboard and Live Graph: </strong> 
+                <ul style="margin-left: 20px; ">
+                    <li>Displays current temperature, humidity and time</li>
+                    <li>Displays data points in real time on a line chart</li>
+                </ul>
+                </li>
+            <li><strong>Data Logging and Exporting: </strong> 
+                <ul style="margin-left: 20px; ">
+                    <li>Users can download the CSV file that contains the readings and timestamps</li>
+                    <li>Users can download the graph as an image</li>
+                </ul>
+                </li>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- System Setup-->
+    <section id="ss">
+        <h2>System Setup</h2>
+        <h3>System Architecture</h3>
+        <img src="images/temp-arch.png" alt="temp arch" style="width: 100%; height: 60%;  margin-top: 1rem" class="zoomable"  onclick="openLightbox(this)">
+
+        <div style="display: flex; gap: 2rem; ">
+
+        <div style="flex: 0.3 400px; ">
+        <h3>Hardware</h3>
+        <div><img src="images/temp-wiring.png" alt="temp wiring" style="width: 100%; height: 60%; margin-top: 0.5rem"  class="zoomable"  onclick="openLightbox(this)"></div>
+        <p style="text-align: center; margin-top: 0.5rem; font-size: 0.9rem; color: #4a4c4f;">DHT11 sensor wiring diagram showing GPIO pin connections to Raspberry Pi</p>
+        </div>
+
+        <div style="flex: 1; align-items: center; ">
+        <h3>Software</h3>   
+        <h4>Technology Stack</h4>
+            <li><strong>Language - </strong> Python</li>
+            <li><strong>Operating System - </strong> Raspberry Pi</li>
+            <li><strong>Framework - </strong> Tkinter</li>
+        <h4>Libraries & Dependencies</h4>
+            <li><strong>Hardware - </strong> adafruit_dht, board</li>
+            <li><strong>System & Utilities - </strong> threading, zoneinfo, datetime</li>
+            <li><strong>Data Handling & Math - </strong> csv, statistics, collections (deque) </li>
+            <li><strong>Data Visualization - </strong> matplotlib (pyplot, figure, animation, backends.backend_tkagg)</li>
+        </div>
+        </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section style="background: #f9fafb; " id="demo">
+    <h2>System in Action</h2>
+    <p style="text-align:center; ">Watch the environmental monitoring system display the current temperature and humidity readings in real-time:</p>
+    <div style="max-width: 1920px; ">
+        <video src="videos/temp-demo.mp4" controls style="width: 100%; border-radius: 8px;"></video>
+    </div>
+    </section>
+
+    <!-- REFLECT -->
+    <section id="re">
+    <h2>Project Reflection</h2>
+        <p>
+            This was my first hands-on experience working with hardware, and while the wiring itself was straightforward, I'll admit I was nervous at first. 
+            The thought of something exploding, especially since the equipment wasn't mine added real pressure to the situation. The constant fear of accidentally 
+            connecting the wrong pin or pulling out the wrong wire was scary
+        </p>
+        <p>
+            Despite these anxieties, the project went smoothly for someone working with hardware for the first time. It opened my eyes to how things work on a physical 
+            level in relation to software, satisfying my curious nature. Getting to see the data display in real-time on the dashboard was incredibly rewarding...watching 
+            the system come to life making the entire effort worthwhile.
+        </p>
+        <p>
+            This experience was made enjoyable by my team member and the support from other groups. I'm grateful to my lecturer for expanding my skill set beyond software 
+            development, making me more prepared and well-rounded for real-world challenges in the world of work.
+        </p>
+    </section>
+
+    <section>
+        <div class="buttons" style="display: flex; align-items: center;  padding-top: 2rem;">
+            <a href="irrigation.html" class="btn btn-fifth">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <a href="tech.html" class="btn btn-fifth">Back to All Projects</a>
+            <a href="#" class="btn btn-fifth" style="opacity: 0.6; pointer-events: none;">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+ 
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

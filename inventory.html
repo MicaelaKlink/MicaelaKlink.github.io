@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div style="width: 100%; background: linear-gradient(135deg, #3d4c3d 0%, #2a3a2a 100%);">
+        <img src="gif/Inventory-banner.gif" alt="inventory banner" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <!-- STATS SECTION -->
+    <section class="project-stats-cards">
+        <div class="stats-cards-container">
+            <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Weeks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">APIs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">Real-Time</div>
+                <div class="stat-label">Data Syncing</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">2</div>
+                <div class="stat-label">User Roles</div>
+            </div>
+        </div>
+        
+        <!-- NAV -->
+        <div style="margin-top: 2rem; font-size: 1.02rem;">
+            <strong>Quick Navigation:</strong>
+            <a href ="#ov" style="color: #476c47; text-decoration: none; font-weight: bold;">Overview </a> | 
+            <a href="#fe" style="color: #476c47; text-decoration: none; font-weight: bold;">Key Features</a> | 
+            <a href="#ss" style="color: #476c47; text-decoration: none; font-weight: bold;">System Setup</a> | 
+            <a href="#er" style="color: #476c47; text-decoration: none; font-weight: bold;">Error Handling</a> |
+            <a href="#api" style="color: #476c47; text-decoration: none; font-weight: bold;">API</a> |
+            <a href="#re" style="color: #476c47; text-decoration: none; font-weight: bold;">Project Reflections</a>
+        </div>
+    </section>
+
+
+    <!-- PROJECT OVERVIEW -->
+    <section style="background: #f9fafb; " id="ov">
+         <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+       
+            <div style="flex: 1; min-width: 300px; border-right: 2px solid #5f636a; padding-right: 2rem; ">
+                <h2>Project Overview</h2>
+                <p>
+                    <strong>Problem:</strong> TechInnovators Inc., founded in 2010, is an engineering firm that designs and develops Internet of Things (IoT)
+                     devices and equipment. Due to the rapid growth in the company, TechInnovators Inc. encountered obstacles such as difficulties in managing 
+                     the inventory, including its movements. Due to these challenges, TechInnovators Inc. requires a system that will allow for 
+                    admin to manage inventory in one central place.
+                </p>
+                <p>
+                    <strong>Key Requirements:</strong> The system that must be developed in Oracle APEX should allow for the admin to track, update, view and assign 
+                    inventory. Additionally, the admin should be able to analyze and gather trends and insights about the inventory, such as how long the equipment 
+                    is in use and what equipment is used the most to ensure and assist admin in better tracking of the movement of inventory and improve decision making 
+                    in regards to obtaining equipment from suppliers, etc. Additionally, employees require a system that will allow them to view their historical usage 
+                    and to check in their equipment via QR code scanning. The development for the employees system must be developed using Python.          
+                 </p>
+                <p>
+                    <strong>Solution:</strong> Develop a system on Oracle APEX for admin to track, assign and update inventory. Additionally, develop another system using
+                    Python for employees to view inventory history and for returning inventory by scanning a QR code.         
+                 </p>
+            </div>
+
+            <div style="flex: 1; min-width: 300px; " id="fe">
+            <h2>Key Features</h2>
+                <h3>Admin</h3>
+                    <li><strong>Status -</strong> A quick display for admin to view current pending vs approved requests</li>
+                    <li><strong>Manage Inventory -</strong> Admin can add new inventory, update existing inventory and assign inventory</li>
+                    <li><strong>Track Inventory -</strong> Charts, reports and cards for admin to track movement of inventory</li>
+                    <li><strong>Manage Employees -</strong> Admin can add new employees and view existing employees inventory history</li>
+                    <li><strong>Analytics -</strong> Charts and Reports displayed to assist in planning and decision-making</li>
+                <h3>Employees</h3>
+                    <li><strong>History -</strong> Employees can view their inventory history</li>
+                    <li><strong>Return Inventory -</strong> Employees must return items via QR code scanning</li>
+                    <li><strong>Request Inventory -</strong> Employees can request inventory that admin must approve</li>
+                <h3>Additional</h3>
+                    <li><strong>Input -</strong> User's can type their inputs instead of scrolling through heaps of items</li>
+            </div>
+        </div> 
+    </section>
+
+    <!-- system-->
+    <section id="ss">
+        <h2>System Setup</h2>
+        <h3>Database Schema (ERD)</h3>
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+
+            <div style="flex: 0.1 400px;">
+                <img src="images/inventory-ERD.jpg" alt="Vision System Before" style="width: 100%; height: 100%; " class="zoomable" onclick="openLightbox(this) ">
+            </div>
+
+        <div style="flex: 1; min-width: 300px; ">
+        <h4>History:</h4>
+            <li><strong>BOOKING_ID:</strong> Uniquely identifies the assigned item.</li>
+            <li><strong>ITEM_ID:</strong> A foreign key that assists admin in viewing which item was borrowed</li>
+            <li><strong>EMPLOYEE_ID:</strong> A foreign key that assists admin in identifying who has the equipment</li>
+            <li><strong>DATE_BOOKED:</strong> The date the admin assigns the item and employee obtains it</li>
+            <li><strong>DATE_RETURNED:</strong> The date the employee returns the item</li>
+            <li><strong>QUANTITY_ASSIGNED:</strong> The quantity of the item the admin assigns to an employee/quantity the employee receives</li>
+            <li><strong>REQUEST_ID:</strong> Foreign key that links to request table</li>
+        <h4>Employees:</h4>
+            <li><strong>EMPLOYEE_ID:</strong> Uniquely identifies employee</li>
+            <li><strong>NAME:</strong> The name of the employee</li>
+            <li><strong>SURNAME:</strong> The surname of the employee</li>
+            <li><strong>DEPARTMENT:</strong> The Department the employee belongs to</li>
+        <h4>Inventory:</h4>
+            <li><strong>ITEM_ID:</strong> Uniquely identifies the item/equipment/inventory</li>
+            <li><strong>ITEM_NAME:</strong> The Full name of the item/equipment/inventory</li>
+            <li><strong>QUANTITY:</strong> The quantity for the item</li>
+            <li><strong>LAST_UPDATED:</strong> The date the inventory was last updated</li>
+        <h4>Requests:</h4>
+            <li><strong>REQUEST_ID:</strong> Uniquely identifies request</li>
+            <li><strong>ITEM_ID:</strong> A foreign key that links to the inventory table</li>
+            <li><strong>EMPLOYEE_ID:</strong> A foreign key that links to the employee table</li>
+            <li><strong>QUANTITY_REQUIRED:</strong> The quantity of an item the employee requests</li>
+            <li><strong>REQUEST_DATE:</strong> The date the employee submitted the request</li>
+            <li><strong>REQUIRED_DATE:</strong> The date the employee needs the item by</li>
+            <li><strong>STATUS:</strong> To display Pending and Approved</li>
+        </div>
+        </div>
+        <h3>Technology Stack and Libraries</h3>
+        <h4>Core Frameworks:</h4>
+            <li><strong>Python:</strong> Primary language for the development for the employees frontend</li>
+            <li><strong>Oracle APEX:</strong> To develop admin frontend, database purposes and the creation of the APIs</li>
+            <li><strong>Streamlit:</strong> For creating interactive web applications frontend</li>
+        <h4>Libraries & Dependencies:</h4>
+            <li><strong>http.client:</strong> Handles HTTP requests.</li>
+            <li><strong>dotenv:</strong> Manages and load environment variables from .env file</li>
+            <li><strong>base64:</strong> For encoding credentials for Basic authentication</li>
+            <li><strong>cv2 (OpenCV):</strong> For webcam access for QR code scanning</li>
+            <li><strong>pyzbar:</strong> For decoding QR code</li>
+            <li><strong>pandas:</strong> For data manipulation and to display tables in the Streamlit app</li>
+            <li><strong>urllib.parse:</strong> For URL parsing and encoding query parameters</li>
+            <li><strong>json:</strong> For handling JSON data</li>
+    </section> 
+
+    <!-- Error Handling -->
+    <section style="background: #f9fafb; " id="er">
+        <h2>Error Handling</h2>
+            <li>If an employee attempts to use another employee's QR code to return an item, the API validates the employee ID and sends a response indicating that the 
+                item is not assigned to them</li>
+            <li>If an employee attempts to return an item that was already returned, the system notifies them that the item was previously checked in. The original 
+                return date remains unchanged</li>
+    </section>
+
+    <!-- API -->
+    <section id="api">
+    <h2>API Documentation</h2>
+    <p>The API bridges Python and Oracle APEX so data is connected and updated on both ends for both the admin and employee. It also ensures that the database in Oracle 
+        APEX is updated with each request and response made. Furthermore, the API is exposed via Oracle REST Data Services (ORDS) and secured by Basic Authentication.
+    </p>
+    <h3>Methods (HTTPS)</h3>
+    <li><strong>GET - </strong> There is one GET endpoint which enables employees to retrieve their inventory history that is stored in Oracle APEX database</li>
+    <li><strong>POST - </strong>There are two POST endpoints. One enables employees to insert their BOOKING_ID and scan a QR code that is linked to their
+                EMPLOYEE_ID. Once the user executes this task, the date and the item returned will be updated in Oracle APEX database.
+                The other endpoint enables employees to request inventory</li>
+    </section>`
+
+   <!-- reflect -->
+    <section style="background: #f9fafb; " id="re">
+        <h2>Project Reflection</h2>
+        <p>Going into this, I thought it would be a challenge regarding API development, considering it was my first time creating APIs from scratch rather 
+            than relying on generated code. However, it turned out to be fairly straightforward. This assignment helped me understand how APIs work and 
+            satisfied my curiosity about how systems are connected and synced in real-time.
+        </p>
+        <p>Despite some setbacks, I enjoyed this project as it gave me the freedom to brainstorm solutions and exercise creativity in the system design.</p>
+    </section>
+    
+    <!-- Project Navigation -->
+    <section>
+        <div class="buttons" style="display: flex; align-items: center;  padding-top: 2rem;">
+            <a href="chatbot.html" class="btn btn-fifth">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <a href="tech.html" class="btn btn-fifth">Back to All Projects</a>
+            <a href="vision-system.html" class="btn btn-fifth">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

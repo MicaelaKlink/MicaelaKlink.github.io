@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!--BANNER-->
+        <section class="hero">
+            <!-- Morphing Blobs -->
+            <div class="blob-container">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+                <div class="blob blob-4"></div>
+                <div class="blob blob-5"></div>
+                <div class="blob blob-6"></div>
+                <div class="blob blob-7"></div>
+            <!-- Floating Particles -->
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
+                <div class="particle particle-4"></div>
+                <div class="particle particle-5"></div>
+                <div class="particle particle-6"></div>
+                <div class="particle particle-7"></div>
+                <div class="particle particle-8"></div>
+                <div class="particle particle-9"></div>
+                <div class="particle particle-10"></div>
+                <div class="particle particle-11"></div>
+                <div class="particle particle-12"></div>
+            </div>
+            <!-- Glass Overlay -->
+            <div class="glass-overlay"></div>
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1>My Projects</h1>
+                <p>Curiosity sparks ideas. Creativity shapes solutions. Creation brings them to life. These are the three C's that guide my journey as a developer and designer. 
+                    Let's explore what happens when technical skills meet creative thinking.
+                </p>
+            </div>
+        </section>
+
+    <!--------------------------------------------------------------------------------PROJECTS------------------------------------------------------------------------->
+    <section>
+        <p style="margin-bottom:2rem; text-align:center;"><strong>Below are a few of my top projects</strong></p>
+        <div class="loose-grid">
+
+            <!--Storytelling-->
+            <div class="loose-card"><video src="videos/storytelling.mp4" controls></video>
+                <div class="loose-content">
+                    <p class="loose-description">A YouTube video showcasing narrative-driven content creation and editing techniques</p>
+                    <div class="loose-tags">
+                        <span class="tag">Video Editing</span>
+                        <span class="tag">Storytelling</span>
+                        <span class="tag">Capcut</span>
+                        <span class="tag">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--graphic banner-->
+            <div class="loose-card"><img src="images/graphic-banner.png" alt="graphics page banner" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <p class="loose-description">Custom banner design for my portfolio's graphic design showcase page</p>
+                    <div class="loose-tags">
+                        <span class="tag">Banner</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Vision System-->
+            <div class="loose-card">
+                <div class="loose-image"><img src="images/project3.png" alt="Waste Vision System"></div>
+                <div class="loose-content">
+                    <h3 class="loose-title">Waste Vision System</h3>
+                    <p class="project-description">Computer vision system that classifies waste into 11 categories</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">CNN</span>
+                        <span class="tag">ResNet18</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                    <div class="loose-links">
+                        <button onclick="openModal('video4')">Video Demo</button>
+                        <a href="vision-system.html">Project Details</a>                    
+                    </div>
+                </div>
+            </div>
+
+            <!--Inventory System-->
+            <div class="loose-card">
+                <div class="loose-image"><img src="images/project2.png" alt="Inventory Tracking System"></div>
+                <div class="loose-content">
+                    <h3 class="loose-title">Inventory Tracking System</h3>
+                    <p class="loose-description">Dual-interface inventory management solution with a Python Streamlit app for employees and Oracle APEX dashboard for administrative control</p>
+                    <div class="loose-tags">
+                        <span class="tags">Python</span>
+                        <span class="tags">Streamlit</span>
+                        <span class="tags">Oracle APEX</span>
+                        <span class="tags">SQL & PL/SQL</span>
+                        <span class="tags">API Integration</span>
+                        <span class="tags">Canva</span>
+                    </div>
+                    <div class="loose-links">
+                        <button onclick="openModal('video3')">Video Demo</button>
+                        <a href="inventory.html">Project Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Salam-->
+            <div class="loose-card">
+                <div class="carousel-container" data-carousel>
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="images/hey-salam.png" alt="against the grain" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/hey-salam-2.png" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev">‹</button>
+                    <button class="carousel-btn carousel-next">›</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="loose-content">
+                    <p class="loose-description">An advertisement for a coffee shop created for a group assignment</p>
+                    <div class="loose-tags">
+                        <span class="tag">Promotional Design</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEAN SCENE -->
+            <div class="loose-card"><img src="images/Bean-Scene-final.png" alt="Brand Identity-logo" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <p class="loose-description">Self-initiated brand identity project featuring modern logo design for a fictional coffee shop</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">Self-initiated</span>
+                        <span class="tag">2025</span>
+                    </div>
+                    <div class="loose-links">
+                        <a href="Bean-Scene.html">View Full Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--uwc logo-->
+            <div class="loose-card"><img src="images/uwc-logo.png" alt="uwc women in tech logo" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <p class="loose-description">A logo created for UWC Women In Tech Logo competition</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">2024</span>
+                        <span class="tag">Canva</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Irrigation System-->
+            <div class="loose-card">
+                <div class="loose-image"><img src="images/project4.png" alt="Irrigation System"></div>
+                <div class="loose-content">
+                    <h3 class="loose-title">Irrigation System</h3>
+                    <p class="loose-description">Cross-platform irrigation management app with automated, scheduled, and manual control modes using ESP32 and Flutter</p>
+                    <div class="loose-tags">
+                        <span class="tags">ESP32</span>
+                        <span class="tags">IoT Systems</span>
+                        <span class="tags">Sensor Integration</span>
+                        <span class="tags">Flutter & Dart</span>
+                    </div>
+                    <div class="project-links">
+                        <button onclick="openModal('video5')">Video Demo</button>
+                        <a href="irrigation.html">Project Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sims Intro-->
+            <div class="loose-card"><video src="videos/sims-intro.mp4" controls></video>
+                <div class="loose-content">
+                    <p class="loose-description">An intro video created for my Sims YouTube channel</p>
+                    <div class="loose-tags">
+                        <span class="tag">Video Editing</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align:center; margin-bottom: 1rem; margin-top: 2rem;">Curious about the rest? Well...don't worry, there's more to explore. Check out my full technical and design projects below</p>
+        <div class="buttons">
+        <a href="tech.html" class="btn btn-secondary" >View My Technical Projects</a>
+        <a href="graphics.html" class="btn btn-third" >View My Design Projects</a>
+        </div>
+    </section>
+
+
+    <!------------------------------------------------------------------------------------------ VIDEO MODALS ---------------------------------------------------------->
+   <!--iNVENTORY SYSTEM-->
+    <div id="video3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('video3')">&times;</span>
+                <h2>Inventory System - Video Demo</h2>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/uhP_Bs-15Ww" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--VISION SYSTEM-->
+    <div id="video4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('video4')">&times;</span>
+                <h2>Waste Vision System- Video Demo</h2>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ELHjbOHBvvQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--IRRIGATION-->
+    <div id="video5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('video5')">&times;</span>
+                <h2>Irrigation System - Video Demo</h2>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/e5GqzKtZf_c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

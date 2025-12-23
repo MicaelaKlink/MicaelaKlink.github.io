@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div style="width: 100%; background: linear-gradient(135deg, #3d4c3d 0%, #2a3a2a 100%);">
+        <img src="gif/Chatbot-banner.gif" alt="chatbot banner" style="width: 100%; height: auto; display: block;">
+    </div>
+
+
+    <!-- STATS SECTION -->
+    <section class="project-stats-cards">
+        <div class="stats-cards-container">
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Weeks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">7</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4</div>
+                <div class="stat-label">Languages</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">4 second</div>
+                <div class="stat-label">Response Rate</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Voice Accessible</div>
+            </div>
+        </div>
+
+        <!-- NAV -->
+        <div style="margin-top: 2rem; font-size: 1.02rem;">
+            <strong>Quick Navigation:</strong>
+            <a href ="#ov" style="color: #476c47; text-decoration: none; font-weight: bold;">Overview </a> | 
+            <a href="#fe" style="color: #476c47; text-decoration: none; font-weight: bold;">Key Features</a> | 
+            <a href="#ss" style="color: #476c47; text-decoration: none; font-weight: bold;">System Setup</a> | 
+            <a href="#re" style="color: #476c47; text-decoration: none; font-weight: bold;">Project Reflections</a>
+        </div>
+    </section>
+
+
+    <!-- PROJECT OVERVIEW -->
+    <section style="background: #f9fafb; " id="ov">
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+        
+        <div style="flex: 1; min-width: 300px; border-right: 2px solid #5f636a; padding-right: 2rem; ">
+            <h2>Project Overview</h2>
+            <p>
+                <strong>Background:</strong> This project was a group assignment related to vibe coding and a health challenge, this being immunisation reminders.
+                I was assigned to create a backup prototype.
+            </p>
+            <p>
+                <strong>Problem:</strong> Parents residing in South Africa need a reliable way to help track but also to remind them about their children's 
+                immunisation dates to manage all of their children's health, while accessing reliable information in one place.
+            </p>
+            <p>
+                <strong>Solution:</strong> Develop a web application to assist in immunisation journeys, with an intelligent chatbot to provide
+                instant and reliable answers to streamline the immunisation process.              
+            </p>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; " id="fe">
+           <h2>Key Features</h2>
+            <ul>
+                <li><strong>Intelligent Chatbot -</strong> Powered by Gemini 2.5 Flash API for natural language understanding</li>
+                <li><strong>Immunisation tracker and reminder -</strong> Reminder dates are setup automatically according to South Africa's immunisation schedule once 
+                    the user selects their child's birthdate. Additionally, all vaccines including the ages children must get it is listed in a journey format, 
+                    indicating what is completed, due next and completed</li>
+                <li><strong>Management -</strong> Allows users to manage multiple children profiles</li>
+                <li><strong>Multilingual -</strong> Provides accessibility to multiple citizens. Current languages include English, Afrikaans, isiXhosa and isiZulu</li>
+                <li><strong>Text-to-Speech (TTS) -</strong> Enables users to listen to chatbot responses, improving accessibility for users who prefer audio or have reading difficulties</li>
+                <li><strong>Clinic Locator -</strong> Google Maps embedded into the site leading users to another window (Google Maps) displaying nearby health facilities only</li>
+                <li><strong>Community and Education Dashboard -</strong> To provide a safe space for users and to educate them. Currently 
+                this section is not fully functional and reliable for information</li>
+        </ul>
+        </div>
+    </div>
+    </section>>
+
+
+    <!-- System setup -->
+    <section  id="ss">
+        <h2>System Setup</h2>
+            <h3>System Architecture</h3>
+            <div style="height: 500px;">
+                <img src="images/chatbot-arch.png" alt="Vision System Before" style="width: 100%; height: 100%; " class="zoomable" onclick="openLightbox(this)">
+            </div>
+
+
+        <div class="cards-container" style="margin-top: 2rem" >
+
+            <div class="cards-card">
+                <div class="card-header">
+                    <h4>Business Layer</h4>
+                </div>
+                <li><strong>Core Goal:</strong> To enable caregivers to manage their family immunisation journeys</li>
+                <li><strong>Health Tracking:</strong> Track schedules, progress, and upcoming appointments</li>
+                <li><strong>AI Assistance::</strong> Offer an AI-powered chatbot for general health questions</li>
+                <li><strong>Community & Resources:</strong> Connect parents to local clinic resources and provide articles for education</li>
+            </div>
+
+            <div class="cards-card">
+                <div class="card-header">
+                    <h4>Application Layer</h4>
+                </div>
+                <li><strong>Next.js Frontend:</strong> Web application that users interact with. It includes all UI components, pages, and client-side logic</li>
+                    <ul>
+                        <li><strong>UI Components:</strong> Reusable elements like the dashboard, vaccine lists, etc</li>
+                        <li><strong>Page Routing:</strong> Handles navigation between different sections and pages</li>
+                    </ul>
+                <li><strong>Genkit AI Flows:</strong> Set of server-side functions that orchestrate AI model interactions</li>
+                    <ul>
+                        <li><strong>Chatbot Flow:</strong> Manages the logic for receiving a user's question, prompting the AI model, and structuring the response</li>
+                        <li><strong>Summariser Flow:</strong> Handles the logic for summarising health articles</li>
+                        <li><strong>TTS Flow:</strong> Converts text responses from the chatbot into audible speech</li>
+                    </ul>
+                <li><strong>Firebase Services:</strong> Backend services that support the application</li>
+                    <ul>
+                        <li><strong>Authentication Service:</strong> Manages user identity, sign-up, and login</li>
+                        <li><strong>Firestore Service:</strong> Handles all database operations (reading and writing user/child data)</li>
+                    </ul>
+            </div>
+
+            <div class="cards-card">
+                <div class="card-header">
+                    <h4>Tech Layer</h4>
+                </div>
+                <li><strong>Core Framework: Next.js / React (with TypeScript)</strong></li>
+                <li><strong>Frontend UI & Styling:</strong></li>
+                    <ul>
+                        <li><strong>React:</strong> For building the UI</li>
+                        <li><strong>Tailwind CSS:</strong> For all styling</li>
+                        <li><strong>ShadCN UI:</strong> For the core component library (buttons, cards, dialogs)</li>
+                        <li><strong>Recharts:</strong> For the dashboard progress chart</li>
+                    </ul>
+                <li><strong>AI & Machine Learning:</strong></li>
+                    <ul>
+                        <li><strong>Genkit:</strong> The framework for defining and running AI flows</li>
+                        <li><strong>Google Gemini Models:</strong> The specific Large Language Models used for chat, summarisation, and TTS</li>
+                    </ul>
+                <li><strong>Backend & Infrastructure:</strong></li>
+                    <ul>
+                        <li><strong>Firebase SDK:</strong> The client-side library used in the Next.js app to communicate with Firebase services</li>
+                        <li><strong>Firebase App Hosting:</strong> The target platform for deploying the application</li>
+                    </ul>
+            </div>
+
+            <div class="cards-card">
+                <div class="card-header">
+                    <h4>Data Layer</h4>
+                </div>
+                <li><strong>Firestore Database:</strong></li>
+                    <ul>
+                        <li><strong style="color: red;">children</strong> <strong> collection:</strong> Stores documents for each child, containing their 
+                            name, date of birth, associated user ID, and a map of completed vaccines</li>
+                        <li><strong>Security Rules:</strong> Firestore Security Rules (managed by Firebase), ensuring that users can only access and modify their own data</li>
+                    </ul>
+                <li><strong>Firebase Authentication:</strong></li>
+                    <ul>
+                        <li><strong>User Store:</strong> Manages user accounts, including UID, email, display name, and authentication providers (email/password)</li>
+                    </ul>
+                <li><strong>Application Data (Static):</strong></li>
+                    <ul>
+                        <li><strong style="color: red;"> src/lib/locales/*.json</strong> Contains all the internationalization (i18n) strings for different languages</li>
+                        <li><strong style="color: red;"> src/lib/data.ts</strong> Holds static content like the educational articles and initial community posts</li>
+                        <li><strong style="color: red;"> src/lib/vaccine-schedule.ts</strong> Contains the business logic and data for the entire South African immunization schedule</li>
+                        <li><strong style="color: red;"> src/lib/placeholder-images.json</strong> Manages data for placeholder images used throughout the app</li>
+                    </ul>
+        </div>
+        </div>
+
+        <p style="margin-top: 2rem;">**Note, the diagram and explanations were generated from Firebase Gemini chat function and Mermaid</p>
+
+    </section>
+
+
+    <!-- Project Reflection -->
+    <section style="background: #f9fafb; " id="re">
+        <h2>Project Reflection</h2>
+        <p>Although vibe coding appears easy, it is really a challenge. For instance, prompting Firebase to generate certain images like a cartoon family illustration was a
+            challenge because no matter what you prompt, it would not generate the image you want and will rather generate a realistic landscape image. Although amusing now,
+            it was quite frustrating at the time.
+        </p>
+        <p>Despite this setback, Firebase allows users to prompt endlessly, allowing me to create most of the functions I wanted with easy integration such as the TTS, Gemini 
+            API, translation, a database, etc. Additionally Firebase integration is easy as it is part of Google, enabling users to 
+            integrate multiple functions and services. However. I encountered challenges accessing the free trial as I never received the verification code, essentially, 
+            limiting some features I wanted to add such as the Google Maps API integration, etc.
+        </p>
+        <p>For future enhancements, I would integrate more features such as: 
+            <li>Speech-To-Text</li>
+            <li>More languages</li>
+            <li>Integrate with government health systems for improved efficiency</li>
+            <li>Direct contact details for medical professionals</li>
+            <li>Verified educational health articles from trusted sources</li>
+        Despite the navigation challenges and working primarily with generated code, I plan to deepen my understanding of the system architecture, connections, and underlying code.
+        </p>
+        <p>But to conclude, Firebase provides functional solutions and easy integration, though the aesthetic results don't quite match platforms like Lovable (I also created a 
+            prototype on Lovable
+            which is not fully functional, but it can be viewed here: <a href="https://vaxremi.vercel.app/" target="_blank">View Prototype</a>)
+            So although AI is flawed and has its limitations, it still assists us in providing a foundation that can be  further built upon. 
+        </p>
+    </section>
+
+
+    <!-- Project Navigation -->
+    <section>
+        <div class="buttons" style="display: flex; align-items: center;  padding-top: 2rem;">
+            <a href="#" class="btn btn-fifth" style="opacity: 0.6; pointer-events: none;">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <a href="tech.html" class="btn btn-fifth">Back to All Projects</a>
+            <a href="inventory.html" class="btn btn-fifth">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!--BANNER-->
+    <div style="
+        background: url('images/graphic-banner.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 350px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;">
+    <div>
+    <h1 style="font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);">Graphic Design</h1>
+        <p class="section-intro" style="color:white; text-align:center; font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);">Logos, Banners and Videos | From concept to creation </p>
+        <div class="filter-buttons">
+            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('all')">All Projects</button>
+            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('log')">Logos</button>
+            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('ban')">Banner</button>
+            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('des')">Designs</button>
+            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('mo')">Motion</button>
+        </div>
+    </div>
+    </div>
+
+    <!--------------------------------------------------------------------------------PROJECTS------------------------------------------------------------------------->
+    <section>
+        <p style="margin-bottom:2rem; text-align:center;">Digital design...a newfound medium, or somewhat new to me. In recent years, I shifted my focus from traditional 
+            art to digital design due to changes in the market. Despite this shift, I grew fond of graphic design and content creation in general. Unlike traditional art, 
+            it's easy to just undo something...Ctrl + Z really being my favorite command. Furthermore, there's so much you can do digitally, such as creating videos...let's 
+            just say, the options for creativity are endless. Anyways, enjoy the pieces I've created through the years, ranging from images to videos
+        </p>
+        <div class="loose-grid">
+
+            <!--Sims logo-->
+            <div class="loose-card" data-category="log">
+                <div class="carousel-container" data-carousel>
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="images/sims-logo.jpg" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/sims-logo-2.jpg" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev">‹</button>
+                    <button class="carousel-btn carousel-next">›</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="loose-content">
+                    <h3 class="loose-title">Logo for YouTube</h3>
+                    <p class="loose-description">A logo I created for my Sims YouTube channel</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">2024</span>
+                        <span class="tag">Canva</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--tech banner-->
+            <div class="loose-card" data-category="ban"><img src="images/tech-banner.png" alt="tech page banner" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <h3 class="loose-title">Technical Projects Banner</h3>
+                    <p class="loose-description">A banner I created for my Portfolio for my Technical Projects page</p>
+                    <div class="loose-tags">
+                        <span class="tag">Banner</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">2025</span>
+                        </div>
+                    </div>
+                </div>
+
+            <!--chatbot banner-->
+            <div class="loose-card" data-category="ban mo"><video src="videos/chatbot-banner.mp4" controls></video>
+                <div class="loose-content">
+                <p class="loose-description">A banner I created for my Portfolio for one of my Project pages</p>
+                <div class="loose-tags">
+                    <span class="tag">Banner</span>
+                    <span class="tag">Canva</span>
+                    <span class="tag">2025</span>
+                </div>
+                </div>
+            </div>
+
+            <!--My logo-->
+            <div class="loose-card" data-category="log"><img src="images/Micaela-logo.png" alt="personal logo" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <h3 class="loose-title">Personal Logo</h3>
+                    <p class="loose-description">A logo I created for my business account</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Storytelling-->
+            <div class="loose-card" data-category="mo"><video src="videos/storytelling.mp4" controls></video>
+                <div class="loose-content">
+                    <p class="loose-description">A YouTube video showcasing narrative-driven content creation and editing techniques</p>
+                    <div class="loose-tags">
+                        <span class="tag">Video Editing</span>
+                        <span class="tag">Storytelling</span>
+                        <span class="tag">Capcut</span>
+                        <span class="tag">2023</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sims Intro-->
+            <div class="loose-card" data-category="mo"><video src="videos/sims-intro.mp4" controls></video>
+                <div class="loose-content">
+                    <h3 class="loose-title">Intro Video</h3>
+                    <p class="loose-description">An intro video created for my Sims YouTube channel</p>
+                    <div class="loose-tags">
+                        <span class="tag">Video Editing</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--graphic banner-->
+            <div class="loose-card" data-category="ban"><img src="images/graphic-banner.png" alt="graphics page banner" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <h3 class="loose-title">Graphics Page Banner</h3>
+                    <p class="loose-description">Custom banner design for my portfolio's graphic design showcase page</p>
+                    <div class="loose-tags">
+                        <span class="tag">Banner</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Illusion-->
+            <div class="loose-card" data-category="des"><img src="images/illusion.png" alt="geometric design" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <p class="loose-description">A design I created</p>
+                    <div class="loose-tags">
+                        <span class="tag">Design</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2022</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Salam-->
+            <div class="loose-card" data-category="log des">
+                <div class="carousel-container" data-carousel>
+                    <div class="carousel-slides">
+                        <div class="carousel-slide">
+                            <img src="images/hey-salam.png" alt="against the grain" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/hey-salam-2.png" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-prev">‹</button>
+                    <button class="carousel-btn carousel-next">›</button>
+                    <div class="carousel-indicators"></div>
+                </div>
+                <div class="loose-content">
+                    <p class="loose-description">An advertisement for a coffee shop created for a group assignment</p>
+                    <div class="loose-tags">
+                        <span class="tag">Promotional Design</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--vision banner-->
+            <div class="loose-card" data-category="ban mo"><video src="videos/vision-banner.mp4" controls></video>
+                <div class="loose-content">
+                    <p class="loose-description">A banner I created for my Portfolio for one of my Project pages</p>
+                    <div class="loose-tags">
+                        <span class="tag">Banner</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--h20-->
+            <div class="loose-card" data-category="log"><img src="images/h2o.png" alt="irrigation system logo" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <h3 class="loose-title">Irrigation App Logo</h3>
+                    <p class="loose-description">A logo for my group assignment where we had to build an irrigation app</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEAN SCENE -->
+            <div class="loose-card" data-category="log"><img src="images/Bean-Scene-final.png" alt="Brand Identity-logo" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <h3 class="loose-title">Bean Scene Logo</h3>
+                    <p class="loose-description">Self-initiated brand identity project featuring modern logo design for a fictional coffee shop</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">Self-initiated</span>
+                        <span class="tag">2025</span>
+                    </div>
+                    <div class="loose-links">
+                        <a href="Bean-Scene.html">View Full Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--bean banner-->
+            <div class="loose-card" data-category="ban"><img src="gif/Bean-Scene-Banner.gif" alt="Brand Identity-banner" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                <p class="loose-description">A banner I created for my Portfolio for one of my Project pages</p>
+                    <div class="loose-tags">
+                        <span class="tag">Banner</span>
+                        <span class="tag">Canva</span>
+                        <span class="tag">2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--uwc logo-->
+            <div class="loose-card" data-category="log"><img src="images/uwc-logo.png" alt="uwc women in tech logo" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                    <h3 class="loose-title">Logo for UWC Women In Tech</h3>
+                    <p class="loose-description">A logo created for UWC Women In Tech Logo competition</p>
+                    <div class="loose-tags">
+                        <span class="tag">Logo</span>
+                        <span class="tag">Branding</span>
+                        <span class="tag">2024</span>
+                        <span class="tag">Canva</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!------------------------------------------------------------------>
+        <p style="text-align:center; margin-bottom: 1rem; margin-top: 2rem;">Want to see more? View my traditional art, where I transform words and concepts into 
+            visual storytelling</p>
+        <div class="buttons">
+            <a href="art.html" class="btn btn-third" >View My Traditional Art</a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

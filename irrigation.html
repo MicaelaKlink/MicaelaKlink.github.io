@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Identity Project - Micaela</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+    <div class="container">
+        <div class="logo">Micaela</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">My Projects ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="projects.html">All Projects</a></li>
+                    <li><a href="tech.html">Technical Projects</a></li>
+                    <li><a href="graphics.html">Graphic Design</a></li>
+                    <li><a href="art.html">Traditional Art</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div style="width: 100%; background: linear-gradient(135deg, #3d4c3d 0%, #2a3a2a 100%);">
+        <img src="gif/irrigation-banner.gif" alt="irrigation banner" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <!-- STATS SECTION -->
+    <section class="project-stats-cards">
+        <div class="stats-cards-container">
+            <div class="stat-card">
+                <div class="stat-value">4</div>
+                <div class="stat-label">Weeks</div>
+            </div>
+            <div class="stat-card">
+                        <div class="stat-value">83.88%</div>
+                        <div class="stat-label">Grade</div>
+                    </div>
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">iOS & Android</div>
+                <div class="stat-label">Support</div>
+            </div>  
+        </div>
+
+        <!-- NAV -->
+        <div style="margin-top: 2rem; font-size: 1.02rem;">
+            <strong>Quick Navigation:</strong>
+            <a href ="#ov" style="color: #476c47; text-decoration: none; font-weight: bold;">Overview </a> | 
+            <a href="#fe" style="color: #476c47; text-decoration: none; font-weight: bold;">Key Features</a> | 
+            <a href="#ss" style="color: #476c47; text-decoration: none; font-weight: bold;">System Setup</a> |
+            <a href="#re" style="color: #476c47; text-decoration: none; font-weight: bold;">Project Reflections</a>
+        </div>
+    </section>
+
+
+    <!-- PROJECT OVERVIEW -->
+    <section style="background: #f9fafb; " id="ov">
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap; ">
+    
+        <div style="flex: 1; min-width: 300px; border-right: 2px solid #5f636a; padding-right: 2rem; ">
+        <h2>Project Overview</h2>
+            <p>
+                <strong>Key Requirements:</strong> To develop an irrigation system using low-cost and low-energy IoT technologies and software development practices 
+                to create tangible improvements in greenhouse and crop development operations at ARC. The system should automate irrigation processes based on 
+                real-time sensor data and track water usage to optimise resource consumption. Furthermore, the system should include scheduling irrigation cycles, 
+                monitoring water flow rates, etc. The system must integrate with the data management and soil moisture team        
+                </p>
+            <p>
+                <strong>Solution:</strong> Create an irrigation system that can be controlled by a mobile device to automate soil irrigation based off soil moisture, 
+                to schedule irrigation sessions and to manually activate and deactivate the irrigation. Additionally, the solution will provide analytical data to 
+                provide insights for the farm managers
+                </p>
+                <p>
+                <strong>Additional:</strong> This was a group assignment where all members worked both on documentation and hardware setup. My primary role was creating
+                the frontend with another member finalising it
+                </p>
+                <p>**Note: All information provided is based off the work I did and key information</p>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; " id="fe">
+           <h2>Key features</h2>
+            <li><strong>Control Modes: </strong> 
+                <ul style="margin-left: 20px; ">
+                    <li><strong>Automation - </strong>Pump automatically switches on and off based on soil moisture thresholds set (user can set thresholds in settings)</li>
+                    <li><strong>Scheduling - </strong>Users can create, edit and delete schedules for irrigation cycles</li>
+                    <li><strong>Manual - </strong>Users can manually turn on and off the pump when needed</li>
+                </ul>
+                </li>
+            <li><strong>System Status: </strong> 
+                <ul style="margin-left: 20px; ">
+                    <li><strong>Pump status - </strong>Indicates if pump is on or off. Additionally if pump is on, the System Status card turns green, and when off, the
+                        card is grey </li>
+                    <li><strong>Countdown- </strong>A countdown runs when the user manually turns on the pump</li>
+                    <li><strong>Control Mode Indicator - </strong>Indicates which control mode switched the pump on</li>
+                </ul>
+                </li>
+            <li><strong>Key Metrics - </strong>Displays soil moisture levels, flow rate, total volume and cycle usage</li>
+            <li><strong>History Page - </strong>Displays key information of the irrigation cycle that took place such as the actual duration vs its set duration and its 
+                reason, including the volume</li>
+            <li><strong>Analytics Page - </strong>Displays charts that can be filtered to different time ranges so the user can use the data for insights and decision-making.
+                Example, comparing specific months across the years, the user can identify seasonal trends, where viewing data for today can assist the user in detecting 
+                irregular patterns quickly, e.g., if the flow rate changed drastically, the user can detect that it might be faulty within that day</li>
+            <li><strong>Settings Page - </strong>Gives the user the option to have control over the app, like changing the language or metric system, enabling and disabling 
+                notifications and alerts or adjusting moisture thresholds. Additionally, there is a user guide to further assist the user</li>
+        </div>
+        </div>
+    </section>
+
+    
+    <!-- System Setup-->
+    <section id="ss">
+        <h2>System Setup</h2>
+        <div style="display: flex; gap: 2rem;">
+
+        <div style="flex: 1 500px; ">
+        <h3>Hardware</h3>
+            <div><img src="images/irrigation-wiring.jpg" alt="irrigation wiring" style="width: 100%; height: 60%;" class="zoomable" onclick="openLightbox(this)"></div>
+        </div>
+
+        <div style="flex: 1;">
+        <h3>Software</h3>   
+        <h4>Technology Stack</h4>
+            <li><strong>Language - </strong>Dart</li>
+            <li><strong>Framework - </strong>Flutter</li>
+        <h4>Core Libraries (Built-in)</h4>
+            <li><strong>flutter/material - </strong>provides material design widgets (android)</li>
+            <li><strong>flutter/cupertino - </strong>provide iOS-style widgets</li>
+            <li><strong>dart:async - </strong>used for timer (for the countdown and system updates loops) and asynchronous programming</li>
+            <li><strong>dart:math - </strong>to generate random numbers for the mock data</li>
+        <h4>Third-party Libraries & Dependencies</h4>
+            <li><strong>fl_chart - </strong>for rendering charts</li>
+            <li><strong>intl - </strong>for date and time formatting</li>
+            <li><strong>vibration - </strong>used to trigger vibration for alerts and notifications</li>
+        <h4>Additional</h4>
+            <p>The data management team stores the data in Oracle APEX. They are responsible for creating the APIs too</p>
+        </div>
+        </div>
+    </section>
+
+
+    <!--ref -->
+    <section style="background: #f9fafb; " id="re">
+        <h2>Project Reflections</h2>
+            <p>
+                The main challenge we faced as a group was limited communication with the data management team, who weren't consistently on campus. Since our system was highly 
+                dependent on their API integration, this created coordination difficulties. However, we didn't let this stop us and continued working where we could. For 
+                future enhancements I would love to incorporate:
+                <li>various languages to support the diverse country</li>
+                <li>integrate an ultrasonic sensor into the irrigation system to measure the tank level which will be displayed in the application. This will alert 
+                    the farm managers about the current tank levels</li>
+            <li>integrate notifications to display within the users phone system through Firebase Cloud Messaging or OneSignal. This will enable users to receive 
+                notifications like pump status and duration on their devices without having to access the app.</li>
+                <li>integrate the weather into the app through an API. This can assist in scheduling based on weather conditions and recommendations that the app will make</li>
+            <li>add a manual reset for total volume</li>
+            </p>
+    </section>
+
+    <section>
+        <div class="buttons" style="display: flex; align-items: center;  padding-top: 2rem;">
+            <a href="vision-system.html" class="btn btn-fifth">
+                <i class="fas fa-arrow-left"></i> Previous
+            </a>
+            <a href="tech.html" class="btn btn-fifth">Back to All Projects</a>
+            <a href="temp.html" class="btn btn-fifth">
+                Next <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+ 
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
+                <div class="footer-brand">I Don't EvenS Know™</div>
+            </div>
+            <div class="footer-contact">
+                <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/micaela-klink-6b39152ba" target="_blank" title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://youtube.com/@micaelaklinksims" target="_blank" title="YouTube" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@micaela__k?is_from_webapp=1&sender_device=pc" target="_blank" title="TikTok" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" onclick="closeLightbox()" style="position: absolute; top: 20px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+        <img id="lightbox-img" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <button class="lightbox-prev" onclick="navigateLightbox(-1)">‹</button>
+        <button class="lightbox-next" onclick="navigateLightbox(1)">›</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
