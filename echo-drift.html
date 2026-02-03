@@ -27,321 +27,171 @@
     </div>
     </nav>
 
-    <!--BANNER-->
-    <div style="
-        background: url('images/graphic-banner.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 350px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;">
-    <div>
-    <h1 style="font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease-out;
-    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);">Graphic Design</h1>
-        <p class="section-intro" style="color:white; text-align:center; font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
-            text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);">Logos, Banners and Videos | From concept to creation </p>
-        <div class="filter-buttons">
-            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('all')">All Projects</button>
-            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('log')">Logos</button>
-            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('ban')">Banner</button>
-            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('des')">Designs</button>
-            <button class="btn btn-third" style=" animation: fadeInUp 1s ease-out;" onclick="filterLoose('mo')">Motion</button>
-        </div>
-    </div>
+    <!-- HERO SECTION -->
+    <div style="width: 100%; background: black;">
+        <img src="images/echo-drift-banner.png" alt="echo drift album cover banner" style="width: 100%; height: auto; display: block;">
     </div>
 
-    <!--------------------------------------------------------------------------------PROJECTS------------------------------------------------------------------------->
+
+    <!-- PROJECT OVERVIEW -->
     <section>
-        <p style="margin-bottom:2rem; text-align:center;">Digital design...a newfound medium, or somewhat new to me. In recent years, I shifted my focus from traditional 
-            art to digital design due to changes in the market. Despite this shift, I grew fond of graphic design and content creation in general. Unlike traditional art, 
-            it's easy to just undo something...Ctrl + Z really being my favorite command. Furthermore, there's so much you can do digitally, such as creating videos...let's 
-            just say, the options for creativity are endless. Anyways, enjoy the pieces I've created through the years, ranging from images to videos
-        </p>
-        <div class="loose-grid">
-
-            <!--Echo Drfit-->
-            <div class="loose-card" data-category="design"><img src="images/Echo-Drift-Final.png" alt="Indie Album Cover" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Album Cover</h3>
-                    <p class="loose-description">Dreamy space-themed album cover for a fictional indie band called Soft Comet</p>
-                    <div class="loose-tags">
-                        <span class="tag">Album Cover</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">2025</span>
-                    </div>
-                    <div class="loose-links">
-                        <a href="echo-drift.html">View Full Project</a>
-                    </div>
-                </div>
+        <h2>Project Overview</h2>
+            <div>
+                <p>
+                    <strong>Background:</strong> I decided to take the initiative to challenge myself and step into a new environment. This led me to asking AI, well, 
+                    ChatGPT in particular to give me a request so I can practice freelancing. And so, they gave me the brief that is listed below.
+                </p>
+                <p>
+                    <strong>Brief:</strong> "Design a cover for a fictional indie band called Soft Comet. Album name: Echo Drift. The band wants a dreamy, space-themed aesthetic with soft pastel tones."
+                </p>
+                <p><strong> So, here's my journey below: </strong></p>
             </div>
+    </section>
 
-            <!--Sims logo-->
-            <div class="loose-card" data-category="log">
-                <div class="carousel-container" data-carousel>
-                    <div class="carousel-slides">
-                        <div class="carousel-slide">
-                            <img src="images/sims-logo.jpg" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="images/sims-logo-2.jpg" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
-                        </div>
-                    </div>
-                    <button class="carousel-btn carousel-prev">‹</button>
-                    <button class="carousel-btn carousel-next">›</button>
-                    <div class="carousel-indicators"></div>
-                </div>
-                <div class="loose-content">
-                    <h3 class="loose-title">Logo for YouTube</h3>
-                    <p class="loose-description">A logo I created for my Sims YouTube channel</p>
-                    <div class="loose-tags">
-                        <span class="tag">Logo</span>
-                        <span class="tag">Branding</span>
-                        <span class="tag">2024</span>
-                        <span class="tag">Canva</span>
-                    </div>
-                </div>
-            </div>
+    <!-- DESIGN PROCESS - INITIAL CONCEPTS -->
+    <section style="background: #f9fafb;">
+        <h2>Design Journey</h2>
 
-            <!--tech banner-->
-            <div class="loose-card" data-category="ban"><img src="images/tech-banner.png" alt="tech page banner" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Technical Projects Banner</h3>
-                    <p class="loose-description">A banner I created for my Portfolio for my Technical Projects page</p>
-                    <div class="loose-tags">
-                        <span class="tag">Banner</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">2025</span>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+            
+            <!-- LEFT COLUMN: Design Process -->
+            <div>
+                <h3>Design Process</h3>
+                
+                <!-- step 1 and 2 -->
+                <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; margin-top: 1.5rem; align-items: center;">
+                    <!-- Images Container -->
+                    <div style="flex-shrink: 0; display: flex; gap: 1rem;">
+                        <div style="width: 150px; height: 150px; background: #f3f4f6; border-radius: 10px; overflow: hidden;">
+                            <img src="images/echo-drift-1.png" alt="Concept 1" style="width: 100%; height: 100%; object-fit: cover;" class="zoomable" onclick="openLightbox(this)">
+                        </div>
+                        <div style="width: 150px; height: 150px; background: #f3f4f6; border-radius: 10px; overflow: hidden;">
+                            <img src="images/echo-drift-2.png" alt="Concept 2" style="width: 100%; height: 100%; object-fit: cover;" class="zoomable" onclick="openLightbox(this)">
                         </div>
                     </div>
-                </div>
-
-            <!--chatbot banner-->
-            <div class="loose-card" data-category="ban mo"><video src="videos/chatbot-banner.mp4" controls></video>
-                <div class="loose-content">
-                <p class="loose-description">A banner I created for my Portfolio for one of my Project pages</p>
-                <div class="loose-tags">
-                    <span class="tag">Banner</span>
-                    <span class="tag">Canva</span>
-                    <span class="tag">2025</span>
-                </div>
-                </div>
-            </div>
-
-            <!--My logo-->
-            <div class="loose-card" data-category="log"><img src="images/Micaela-logo.png" alt="personal logo" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Personal Logo</h3>
-                    <p class="loose-description">A logo I created for my business account</p>
-                    <div class="loose-tags">
-                        <span class="tag">Logo</span>
-                        <span class="tag">Branding</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2023</span>
+                    <!-- Text Container -->
+                    <div style="flex: 1;">
+                        <p>
+                            Going into this project, I was set on adding a figure that is sitting on something. Additionally, I really wanted to add a planet.
+                            Going along with these ideas, I decided to add the album cover name as the rings for the planet, making it a union.
+                        </p>
                     </div>
                 </div>
-            </div>
-
-            <!--Storytelling-->
-            <div class="loose-card" data-category="mo"><video src="videos/storytelling.mp4" controls></video>
-                <div class="loose-content">
-                    <p class="loose-description">A YouTube video showcasing narrative-driven content creation and editing techniques</p>
-                    <div class="loose-tags">
-                        <span class="tag">Video Editing</span>
-                        <span class="tag">Storytelling</span>
-                        <span class="tag">Capcut</span>
-                        <span class="tag">2023</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--Sims Intro-->
-            <div class="loose-card" data-category="mo"><video src="videos/sims-intro.mp4" controls></video>
-                <div class="loose-content">
-                    <h3 class="loose-title">Intro Video</h3>
-                    <p class="loose-description">An intro video created for my Sims YouTube channel</p>
-                    <div class="loose-tags">
-                        <span class="tag">Video Editing</span>
-                        <span class="tag">Branding</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2024</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--graphic banner-->
-            <div class="loose-card" data-category="ban"><img src="images/graphic-banner.png" alt="graphics page banner" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Graphics Page Banner</h3>
-                    <p class="loose-description">Custom banner design for my portfolio's graphic design showcase page</p>
-                    <div class="loose-tags">
-                        <span class="tag">Banner</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">2025</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--Illusion-->
-            <div class="loose-card" data-category="des"><img src="images/illusion.png" alt="geometric design" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <p class="loose-description">A design I created</p>
-                    <div class="loose-tags">
-                        <span class="tag">Design</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2022</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--Urban Canvas-->
-            <div class="loose-card" ><img src="images/Urban-Canvas-Poster.png" alt="Gritty and graffiti-inspired poster" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Event Poster</h3>
-                    <p class="loose-description">Gritty and graffiti-inspired poster for a fictional art event</p>
-                    <div class="loose-tags">
-                        <span class="tag">Poster</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2025</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--Salam-->
-            <div class="loose-card" data-category="log des">
-                <div class="carousel-container" data-carousel>
-                    <div class="carousel-slides">
-                        <div class="carousel-slide">
-                            <img src="images/hey-salam.png" alt="against the grain" class="zoomable" onclick="openLightbox(this)">
+                
+                <!-- step 3 and 4 -->
+                <div style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; align-items: center;">
+                    <!-- Images Container -->
+                    <div style="flex-shrink: 0; display: flex; gap: 1rem;">
+                        <div style="width: 150px; height: 150px; background: #f3f4f6; border-radius: 10px; overflow: hidden;">
+                            <img src="images/echo-drift-3.png" alt="Concept 3" style="width: 100%; height: 100%; object-fit: cover;" class="zoomable" onclick="openLightbox(this)">
                         </div>
-                        <div class="carousel-slide">
-                            <img src="images/hey-salam-2.png" alt="Sims logo" class="zoomable" onclick="openLightbox(this)">
+                        <div style="width: 150px; height: 150px; background: #f3f4f6; border-radius: 10px; overflow: hidden;">
+                            <img src="images/echo-drift-4.png" alt="Concept 4" style="width: 100%; height: 100%; object-fit: cover;" class="zoomable" onclick="openLightbox(this)">
                         </div>
                     </div>
-                    <button class="carousel-btn carousel-prev">‹</button>
-                    <button class="carousel-btn carousel-next">›</button>
-                    <div class="carousel-indicators"></div>
-                </div>
-                <div class="loose-content">
-                    <p class="loose-description">An advertisement for a coffee shop created for a group assignment</p>
-                    <div class="loose-tags">
-                        <span class="tag">Promotional Design</span>
-                        <span class="tag">Branding</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2024</span>
+                    <!-- Text Container -->
+                    <div style="flex: 1;">
+                        <p>
+                            After composition, I decided to add blurring layers to make it dreamy but also not too plain. I added a half blur effect on the figure to signify that the figure 
+                            drifting, hence, linking it to the album's name. I also, used a figure that is leaning to further emphasis this and to connect it to the dreamy vibe. The last
+                            details before struggling with the font of the band's name was adding galaxy themed images within my circle and text to make it space-themed.
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <!--vision banner-->
-            <div class="loose-card" data-category="ban mo"><video src="videos/vision-banner.mp4" controls></video>
-                <div class="loose-content">
-                    <p class="loose-description">A banner I created for my Portfolio for one of my Project pages</p>
-                    <div class="loose-tags">
-                        <span class="tag">Banner</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2025</span>
+            <!-- RIGHT COLUMN: Final Design -->
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Final Design</h3>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: center; ">
+                    <!-- Final Design Image -->
+                    <div class="logo-image">
+                        <img src="images/Echo-Drift-Final.png" alt="Final Logo" style="max-width: 100%; height: 100%; border-radius: 10px;" class="zoomable" onclick="openLightbox(this)">
+                    </div>
+
+                    <!-- Specs next to image -->
+                    <div>
+                        <h4>Colour Palette</h4>
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: #4E4455; border-radius: 8px;"></div>
+                                <p style="font-size: 0.8rem;">#4E4455</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: #D4E0FF; border-radius: 8px;"></div>
+                                <p style="font-size: 0.8rem;">#D4E0FF</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: #FF4797; border-radius: 8px;"></div>
+                                <p style="font-size: 0.8rem;">#FF4797</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="width: 60px; height: 60px; background: #FFFBE0; border-radius: 8px;"></div>
+                                <p style="font-size: 0.8rem;">#FFFBE0</p>
+                            </div>
+                        </div>
+                        
+                        <h4>Typography</h4>
+                        <ul style="margin-bottom: 1.5rem;">
+                            <li>Rock Salt</li>
+                            <li>Customised</li>
+                        </ul>
+                        
+                        <h4>Tools</h4>
+                        <ul>
+                            <li><strong>Figma</strong></li>
+                            <li><strong>Pinterest:</strong> For text and circle image, silhouette</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <!--h20-->
-            <div class="loose-card" data-category="log"><img src="images/h2o.png" alt="irrigation system logo" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Irrigation App Logo</h3>
-                    <p class="loose-description">A logo for my group assignment where we had to build an irrigation app</p>
-                    <div class="loose-tags">
-                        <span class="tag">Logo</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">2025</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BEAN SCENE -->
-            <div class="loose-card" data-category="log"><img src="images/Bean-Scene-final.png" alt="Brand Identity-logo" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Bean Scene Logo</h3>
-                    <p class="loose-description">Self-initiated brand identity project featuring modern logo design for a fictional coffee shop</p>
-                    <div class="loose-tags">
-                        <span class="tag">Logo</span>
-                        <span class="tag">Branding</span>
-                        <span class="tag">Figma</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">Self-initiated</span>
-                        <span class="tag">2025</span>
-                    </div>
-                    <div class="loose-links">
-                        <a href="Bean-Scene.html">View Full Project</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--MANCAVE-->
-            <div class="loose-card" data-category="mo"><video src="videos/mancave.mp4" controls></video>
-                <div class="loose-content">
-                    <p class="loose-description">Images compiled to motion</p>
-                    <div class="loose-tags">
-                        <span class="tag">Video Editing</span>
-                        <span class="tag">CapCut</span>
-                        <span class="tag">2023</span>
-                    </div>
-                </div>
-            </div>
-
-
-            <!--bean banner-->
-            <div class="loose-card" data-category="ban"><img src="gif/Bean-Scene-banner.gif" alt="Brand Identity-banner" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                <p class="loose-description">A banner I created for my Portfolio for one of my Project pages</p>
-                    <div class="loose-tags">
-                        <span class="tag">Banner</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">2025</span>
-                    </div>
-                </div>
-            </div>
-
-            <!--uwc logo-->
-            <div class="loose-card" data-category="log"><img src="images/uwc-logo.png" alt="uwc women in tech logo" class="zoomable" onclick="openLightbox(this)">
-                <div class="loose-content">
-                    <h3 class="loose-title">Logo for UWC Women In Tech</h3>
-                    <p class="loose-description">A logo created for UWC Women In Tech Logo competition</p>
-                    <div class="loose-tags">
-                        <span class="tag">Logo</span>
-                        <span class="tag">Branding</span>
-                        <span class="tag">2024</span>
-                        <span class="tag">Canva</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!------------------------------------------------------------------>
-        <p style="text-align:center; margin-bottom: 1rem; margin-top: 2rem;">Want to see more? View my traditional art, where I transform words and concepts into 
-            visual storytelling</p>
-        <div class="buttons">
-            <a href="art.html" class="btn btn-third" >View My Traditional Art</a>
         </div>
     </section>
 
+
+    <!-- BRAND APPLICATIONS -->
+    <section>
+        <div>
+            <h2>Brand Applications</h2>
+            <p style="text-align:center;">How the logo works across different mediums:</p>
+            
+            <div class="loose-grid" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+
+            <div class="loose-card" style="max-width: 400px;"><img src="images/echo-drift-album.png" alt="Album Application" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                </div>
+            </div>
+            <div class="loose-card" style="max-width: 250px;"><img src="images/echo-drift-song.jpg" alt="Song Application" class="zoomable" onclick="openLightbox(this)">
+                <div class="loose-content">
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECT REFLECTION -->
+    <section style="background: #f9fafb;">
+        <h2>Project Reflection</h2>
+        <p>
+            Going into this project was really something different and surprisingly not as challenging as I thought it would be. Coming into this project, I never really 
+            knew what the indie aesthetic is, and if I'm to be completely honest, I still do not fully grasp the style. Additionally, I never made an actual album cover 
+            before besides painting one based off a poem I wrote. Although I feel like digital art gives more creative freedom, comparing to the painting I did, I will
+            admit that at times, I felt like painting this project would have been easier. But I still love the digital solution as it allowed me to play around without
+            making a permanent mistake.
+        </p>
+    </section>
+
+
+
+    <!-- BACK BUTTON -->
 
     <footer>
         <div class="footer-container">
             <div class="footer-left">
                 <div class="footer-copyright">&copy; 2025 Micaela Klink. All rights reserved.</div>
-                <div class="footer-brand">I Don't EvenS Know™</div>
+                <div class="footer-brand">I Don't Even Know™</div>
             </div>
             <div class="footer-contact">
                 <a href="mailto:klinkmicaela@gmail.com" title="Email" aria-label="Email">
@@ -359,7 +209,7 @@
             </div>
         </div>
     </footer>
-
+    
 
     <!-- Lightbox Modal -->
     <div id="lightbox-modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9);">
