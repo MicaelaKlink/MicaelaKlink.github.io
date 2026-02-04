@@ -465,6 +465,7 @@ nav a:hover {
     width: 300px;
     height: 420px;
     min-width: 300px;
+    min-height: 420px;
     background: #e5e7eb;
     border-radius: 10px;
     display: flex;
@@ -1366,7 +1367,19 @@ footer {
     nav .container {
         padding: 0 1.5rem;
     }
+    
+    /* Inline grid/flex layouts - make responsive */
+    section > div[style*="display: flex"],
+    section > div[style*="display: grid"] {
+        flex-wrap: wrap !important;
+    }
+    
+    /* Reduce padding on inline styles */
+    div[style*="padding-right: 2rem"] {
+        padding-right: 1rem !important;
+    }
 }
+
 
 /* Mobile Landscape & Small Tablets (600px - 768px) */
 @media (max-width: 768px) {
@@ -1451,10 +1464,38 @@ footer {
     nav {
         padding: 1rem 0;
     }
+    
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: block;
+    }
 
     nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1f2937;
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem 5%;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 0.75rem 0;
+        width: 100%;
     }
 
     .dropdown-menu {
@@ -1462,9 +1503,12 @@ footer {
         display: none;
         box-shadow: none;
         padding-left: 1rem;
+        top: 0;
+        background: transparent;
     }
 
-    .dropdown:hover .dropdown-menu {
+    .dropdown:hover .dropdown-menu,
+    .dropdown.active .dropdown-menu {
         display: block;
     }
 
@@ -1520,6 +1564,7 @@ footer {
     /* Two Column Layouts */
     div[style*="display: flex"][style*="gap: 2rem"] {
         flex-direction: column !important;
+        gap: 1rem !important;
     }
 
     div[style*="border-right: 2px solid"] {
@@ -1528,6 +1573,33 @@ footer {
         padding-right: 0 !important;
         padding-bottom: 1.5rem !important;
         margin-bottom: 1.5rem !important;
+    }
+    
+    /* Override grid layouts in sections */
+    section div[style*="display: grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    /* Flex items that should stack */
+    div[style*="flex: 1"],
+    div[style*="flex: 0.3"],
+    div[style*="flex: 0.1"] {
+        flex: 1 100% !important;
+        min-width: 100% !important;
+    }
+    
+    /* Images and containers with fixed widths */
+    div[style*="width: 150px"] {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    /* Color palette displays */
+    div[style*="width: 100px"][style*="height: 70px"],
+    div[style*="width: 60px"][style*="height: 60px"] {
+        width: 80px !important;
+        height: 60px !important;
     }
 
     /* Lightbox */
@@ -1638,10 +1710,33 @@ footer {
 
     section h2 {
         font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     section h3 {
         font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    
+    /* Better spacing for inline content */
+    div[style*="margin-top: 1.5rem"] {
+        margin-top: 1rem !important;
+    }
+    
+    div[style*="margin-bottom: 1.5rem"] {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Smaller gaps for mobile */
+    div[style*="gap: 1.5rem"] {
+        gap: 1rem !important;
+    }
+    
+    /* Images in concept sections */
+    div[style*="width: 150px"][style*="height: 150px"] {
+        width: 100px !important;
+        height: 100px !important;
+        min-width: 100px !important;
     }
 
     section h4 {
