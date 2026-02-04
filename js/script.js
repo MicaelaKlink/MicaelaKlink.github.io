@@ -337,31 +337,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===== MOBILE NAVIGATION TOGGLE =====
 // Add hamburger menu functionality if you want to add a mobile menu later
 function createMobileMenu() {
+    const container = document.querySelector('nav .container');
     const nav = document.querySelector('nav ul');
-    if (nav && isMobile) {
-        // Add mobile menu icon
-        const menuIcon = document.createElement('div');
-        menuIcon.className = 'mobile-menu-icon';
-        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
-        menuIcon.style.cssText = 'display: none; cursor: pointer; font-size: 1.5rem; color: #3d4c3d;';
-        
-        const container = document.querySelector('nav .container');
-        if (container && window.innerWidth <= 768) {
-            menuIcon.style.display = 'block';
-            container.insertBefore(menuIcon, nav);
-            nav.style.display = 'none';
-            
-            menuIcon.addEventListener('click', () => {
-                if (nav.style.display === 'none') {
-                    nav.style.display = 'flex';
-                    menuIcon.innerHTML = '<i class="fas fa-times"></i>';
-                } else {
-                    nav.style.display = 'none';
-                    menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+    
+    if (!container || !nav) return;
+    
+    // Check if menu toggle already exists
+    if (document.querySelector('.menu-toggle')) return;
+    
+    // Create hamburger menu button
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    menuToggle.setAttribute('aria-label', 'Toggle menu');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    
+    // Insert toggle button before nav ul
+    container.insertBefore(menuToggle, nav);
+    
+    // Toggle menu on button click
+    menuToggle.addEventListener('click', () => {
+        const isActive = nav.classList.toggle('active');
+        menuToggle.setAttribute('aria-expanded', isActive);
+        menuToggle.innerHTML = isActive ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!container.contains(e.target) && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+    });
+    
+    // Handle dropdown toggles on mobile
+    const dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('a');
+        if (toggle && window.innerWidth <= 768) {
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
                 }
             });
         }
-    }
+    });
 }
 
 // ===== WINDOW RESIZE HANDLER =====
